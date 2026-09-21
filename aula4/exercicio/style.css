@@ -1,0 +1,55 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.menu {
+background-color: rgb(151, 159, 156);
+padding: 10px;
+display: flex;
+justify-content: space-between;
+    
+}
+
+a:link{
+    color:black
+    
+}
+a:hover{
+    color: bisque;
+    
+}
+a{
+    text-decoration: none;
+}
+.main{
+    
+    text-align: center;
+    background-color: rgb(224, 167, 167);
+    height: 30rem;
+    
+    p{
+        text-align: justify;
+    }
+    
+   
+}
+
+img{
+    
+  width:150px;
+  height: 100px;
+}
+  .mensagem {
+    width: 300px; /* Largura */
+    height: 50px; /* Altura */
+  }
+    
+.footer{
+    display: flex;
+    background-color:rgb(151, 159, 156);
+    padding: 10px;
+    justify-self: flex-end;
+    
+}
