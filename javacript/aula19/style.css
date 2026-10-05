@@ -1,0 +1,16 @@
+body{
+    background-color: aquamarine;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastro{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
