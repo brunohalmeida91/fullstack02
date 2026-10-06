@@ -9,9 +9,15 @@ const senhaErro = document.querySelector("#senhaErro");
 
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const cadastro = [];
+
 function validador() {
   event.preventDefault();
   let valido = true;
+
+  let usuario = "";
+  let emailUsu = "";
+  let senhaUsu = "";
 
   if (nome.value.trim() === "") {
     nomeErro.textContent = "Usuario Obrigatorio";
@@ -21,7 +27,7 @@ function validador() {
       location.reload();
     }, 3000);
   } else {
-    console.log(nome.value.trim());
+    usuario = nome.value;
   }
 
   if (!regexEmail.test(email.value)) {
@@ -29,7 +35,7 @@ function validador() {
     emailErro.style.color = "red";
     valido = false;
   } else {
-    console.log(email.value.trim());
+    emailUsu = email.value;
   }
 
   if (senha.value.trim() === "") {
@@ -37,10 +43,20 @@ function validador() {
     senhaErro.style.color = "red";
     valido = false;
   } else {
-    console.log(senha.value.trim());
+    senhaUsu = senha.value;
   }
+
+  cadastro.push(
+    (usuario = {
+      nome: usuario,
+      email: emailUsu,
+      senha: senhaUsu,
+    }),
+  );
+
   if (valido) {
-   window.alert("forulario enviado");
+    console.log(cadastro);
+    window.alert("formulario enviado");
   }
 }
 
